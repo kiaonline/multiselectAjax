@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8" />
+    <title>multiselectAjax - jQuery plugin</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link type='text/css' rel='stylesheet' href='vendors/css/bootstrap-multiselect.css' />
+    <style>
+        pre {
+            margin-top:20px;
+            background: #303030;
+            color: #f1f1f1;
+            padding: 10px 16px;
+            border-radius: 2px;
+            border-top: 4px solid #00aeef;
+            -moz-box-shadow: inset 0 0 10px #000;
+            box-shadow: inset 0 0 10px #000;
+        }
+        pre span {
+            display: block;
+            line-height: 1.5rem;
+        }
+        pre span:before {
+            counter-increment: line;
+            content: counter(line);
+            counter-reset: line;
+            display: inline-block;
+            border-right: 1px solid #ddd;
+            padding: 0 .5em;
+            margin-right: .5em;
+            color: #888
+        }
+
+        pre{
+            counter-reset: line;
+        }
+        code{
+            counter-increment: line;
+        }
+        code:before{
+            content: counter(line);
+        }
+
+        code:before{
+            -webkit-user-select: none;
+            color:greenyellow;
+        }
+        .multiselect-native-select,
+        .multiselect-native-select .btn-group,
+        .multiselect-native-select .btn-group .dropdown-toggle,
+        .multiselect-native-select .btn-group .multiselect-container{
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>multiselectAjax - jQuery plugin</h1>
+    
+        <h3>multiselect plugin</h3>
+        <!-- Build your select: -->
+        <select id="example-getting-started">
+            <option value="1">Cheese</option>
+            <option value="2">Tomatoes</option>
+            <option value="3">Mozzarella</option>
+            <option value="4">Pepperoni</option>
+            <option value="5">Onions</option>
+            <option value="6">Pepper</option>
+        </select>
+        <br>
+        <pre>
+            <code> $(document).ready(function() {
+            </code><code>   $('#example-getting-started').multiselect();
+            </code><code> });</code>
+        </pre>
+        <hr>
+
+        <h3>multiselect AJAX plugin</h3>
+        <!-- Build your select: -->
+        <select id="example-ajax"></select>
+        <br>
+        <pre>
+            <code> $(document).ready(function() {
+            </code><code>   $('#example-getting-started').multiselectAjax("./example-response.json");
+            </code><code> });</code>
+        </pre>
+
+
+    </div>
+
+    <!-- core files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <!-- required plugin -->
+    <script type="text/javascript" src="vendors/js/bootstrap-multiselect.js"></script>
+    
+    <!-- multiselectAjax  -->
+    <script type="text/javascript" src="../dist/jquery.multiselectAjax.min.js"></script>
+
+
+
+
+    <!-- Initialize the plugin: -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#example-getting-started').multiselect();
+            $('#example-ajax').multiselectAjax("./example-response.php");
+        });
+    </script>
+
+
+
+
+</body>
+</html>
