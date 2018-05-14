@@ -1,18 +1,18 @@
 # multiselectAjax
 
-jQuery plugin to wrap default YouTube Player to image cover
+jQuery plugin use multiselect plugin to implement the ajax requests
 
 ## Getting Started
 
-Copy the (youCover) js and css files locate in dist folder into your project
 See examples:
-http://dialogo.digital/public/projects/multiselectAjax/example/
+https://dialogo.digital/public/projects/multiselectAjax/example/
 
-*** View all examples in example/index.html
+
 
 ### Prerequisites
 
 This plugin require jQuery and bootstrap-multiselect plugin: https://github.com/davidstutz/bootstrap-multiselect
+jQuery and Bootstrap
 
 ## License
 
